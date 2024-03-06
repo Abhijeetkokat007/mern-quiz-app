@@ -7,21 +7,21 @@ const path = require('path');
 
 const PORT = process.env.PORT || 8080
 const app = express()
-// app.use(cors({
-//   "origin": [ "http://localhost:5173/"],
-//   "methods": ["POST", "GET"],
-//   "credentials": true
-// }))
-app.use((req, res, next) => {
+app.use(cors({
+  "origin": [ "https://mern-quiz-app-self.vercel.app/", "http://localhost:5173/"],
+  "methods": ["POST", "GET"],
+  "credentials": true
+}))
+// app.use((req, res, next) => {
   
-  res.setHeader('Access-Control-Allow-Origin','http://localhost:5173' );
+//   res.setHeader('Access-Control-Allow-Origin','http://localhost:5173' );
   
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   
-  next();
-});
+//   next();
+// });
 app.use(express.json())
 dbConnection()
 app.use(quiz)
