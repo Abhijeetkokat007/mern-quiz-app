@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const JavaScripQuiz = require("../models/quiz.javascript");
-router.get("/", async (req, res) => {
-  res.send("hello");
-});
+// router.get("/", async (req, res) => {
+//   res.send("hello");
+// });
 
 router.get("/api/quiz/js", async (req, res) => {
   try {
@@ -14,7 +14,11 @@ router.get("/api/quiz/js", async (req, res) => {
       message: `  success  get `,
   });
   } catch (error) {
-    console.log(error)
+    res.json({
+      success: false,
+      
+      message: error.message,
+  });
   }
 });
 
