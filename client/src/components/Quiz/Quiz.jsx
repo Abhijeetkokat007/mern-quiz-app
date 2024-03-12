@@ -17,7 +17,7 @@ const Quiz = () => {
   let [label] = useState(["A", "B", "C", "D"]);
   let [progressBarWidth, setProgressBarWidth] = useState(0);
   const [saveQuiz] = useState([]);
-  let API_URL =  'https://mern-quiz-app-server-gamma.vercel.app/api/quiz/js' 
+  let API_URL =  'http://localhost:8080/api/quiz/js' 
   const getQuestions = async () => {
     try {
       const response = await axios.get(API_URL);

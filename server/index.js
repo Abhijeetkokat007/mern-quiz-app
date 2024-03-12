@@ -4,6 +4,9 @@ require('dotenv').config()
 const dbConnection = require('./db.connection')
 const quiz = require('./routes/quiz')
 const path = require('path');
+const auth = require('./routes/auth')
+
+
 
 const PORT = process.env.PORT || 8080
 const app = express()
@@ -14,7 +17,7 @@ const app = express()
 // }))
 app.use((req, res, next) => {
   
-  res.setHeader('Access-Control-Allow-Origin' ,'https://mern-quiz-app-self.vercel.app' );
+  res.setHeader('Access-Control-Allow-Origin' ,'http://localhost:5173' );
   
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   
@@ -25,6 +28,8 @@ app.use((req, res, next) => {
 app.use(express.json())
 dbConnection()
 app.use(quiz)
+app.use(auth)
+
 
 // app.get("/", async (req, res) => {
 //   res.send("hello");
