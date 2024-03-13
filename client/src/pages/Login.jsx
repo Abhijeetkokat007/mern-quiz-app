@@ -18,13 +18,14 @@ function Login() {
         email,
         password,
       });
-      // localStorage.setItem("quizappuser", JSON.stringify(response?.data?.data));
-      // alert("Login Successfull !");
-      // navigate('/')
-      if (response?.data?.success) {
-        localStorage.setItem('quizappuser', JSON.stringify(response?.data?.data));
-        window.location.href = "/";
-      }
+      // console.log(response.data)
+      localStorage.setItem("quizappuser", JSON.stringify(response?.data));
+      alert("Login Successfull !");
+      navigate('/')
+      // if (response?.data?.success) {
+      //   localStorage.setItem('quizappuser', JSON.stringify(response?.data));
+      //   window.location.href = "/";
+      // }
     } catch (error) {
       console.error(error);
     }

@@ -6,17 +6,21 @@ import { useContext } from "react";
 import QuizContext from "./contexts/QuizContext";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Navbar from "./components/Navbar/Navbar";
 function App() {
   const { userQuiz } = useContext(QuizContext)
   console.log(userQuiz)
   return (
     <>
       <div className="app font-montserrat">
+       <Navbar/>
         <Routes>
           <Route path="/" element={userQuiz ? <Navigate to="/user" /> : <Quiz />} />
           <Route path="/user" element={userQuiz === null ? <Navigate to="/" /> : <User />} />
           <Route path="/login" element={ <Login />} />
           <Route path="/signup" element={ <Signup />} />
+          {/* <Route path="/navbar" element={ <Navbar/>} /> */}
+
         </Routes>
       </div>
     </>
