@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Img from "../../assets/quiz-pic.jpg";
 import QuizContext from "../../contexts/QuizContext";
 import Spiner from "../Spiner";
+import Navbar from "../Navbar/Navbar";
 
 const Quiz = () => {
   let { score, setScore } = useContext(QuizContext);
@@ -119,6 +120,7 @@ const Quiz = () => {
 
   return (
     <>
+    <Navbar/>
       <div className="quiz-wrapper w-full min-h-[100vh] md:grid grid-cols-3">
         <div className="md:block hidden">
           <img src={Img} alt="" className="h-[100%] opacity-[.5]" />

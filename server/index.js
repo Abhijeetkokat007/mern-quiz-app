@@ -5,6 +5,7 @@ const dbConnection = require('./db.connection')
 const quiz = require('./routes/quiz')
 const path = require('path');
 const auth = require('./routes/auth')
+const admin  =  require ( './routes/admin')
 
 
 
@@ -29,6 +30,7 @@ app.use(express.json())
 dbConnection()
 app.use(quiz)
 app.use(auth)
+app.use(admin)
 
 
 // app.get("/", async (req, res) => {
