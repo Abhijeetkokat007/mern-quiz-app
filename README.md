@@ -1,2 +1,2 @@
-# interactive-quiz-app
+# MERN-quiz-app
 Offered by Unified Mentor.
