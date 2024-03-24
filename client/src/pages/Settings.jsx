@@ -1,5 +1,13 @@
-const Settings = () => {
-    return <h1 className="text-center">Setting vvvvvvvvvvvvvvvvvvs</h1>;
-  };
-  
-  export default Settings;
+import React from 'react'
+
+function Settings() {
+  return (
+    <div className='seting'>
+      seting
+
+      
+    </div>
+  )
+}
+
+export default Settings

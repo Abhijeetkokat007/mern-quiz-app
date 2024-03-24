@@ -28,10 +28,10 @@ function App() {
           <Route path="/signup" element={ <Signup />} />
           
 
-          {/* <Route element={<RootLayout />}>
-            <Route path="/ak" element={<Dashboard />} />
+          <Route element={<RootLayout />}>
+            <Route path="/dashbord" element={<Dashboard />} />
             <Route path="/settings" element={<Settings />} />
-          </Route> */}
+          </Route>
           <Route path="/settingss" element={<Settings />} />
         
 

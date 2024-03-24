@@ -40,6 +40,7 @@ router.post("/api/auth/signup", async (req, res ) => {
             username,
             email,
             mobile,
+            score,
             password: hashedPassword,
         });
 

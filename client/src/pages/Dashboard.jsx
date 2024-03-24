@@ -6,13 +6,15 @@ import Settings from './Settings'
 
 function Dashboard() {
   return (
-    <RootLayout>
-      <Routes>
+    // <RootLayout>
+    //   <Routes>
        
-        <Route path="/dashbord/settings" element={<Settings />} />
+    //     <Route path="/settings" element={<Settings />} />
        
-      </Routes>
-    </RootLayout>
+    //   </Routes>
+    // </RootLayout>
+
+   <h> Dashboard</h>
   )
 }
 

@@ -16,7 +16,11 @@ const userSchema = new mongoose.Schema(
             type: Number,
             required: true
         },
-        password: {
+        score: {
+            type: String,
+            
+        },
+        score: {
             type: String,
             required: true,
         },
